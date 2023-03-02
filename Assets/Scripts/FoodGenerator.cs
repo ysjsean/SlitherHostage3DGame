@@ -1,3 +1,4 @@
+using System.Net.NetworkInformation;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,9 +11,22 @@ public class FoodGenerator : MonoBehaviour
     public Vector3 curPos;
     public GameObject curFood;
 
+    private Collider[] hitColliders;
+
+
     void AddNewFood()
     {
-        RandomPos();
+        while (true)
+        {
+            RandomPos();
+            hitColliders = Physics.OverlapSphere(curPos, 0.5f);
+            if (hitColliders.Length == 1)
+            {
+                break;
+            }
+        }
+
+
         curFood = GameObject.Instantiate(foodPrefab, curPos, Quaternion.identity) as GameObject;
     }
 
@@ -23,7 +37,7 @@ public class FoodGenerator : MonoBehaviour
 
     void Update()
     {
-        if (!curFood)
+        if (!curFood && SnakeMovement.instance.isGame_started && !SnakeMovement.instance.isGameOver && !SnakeMovement.instance.isVictory)
         {
             AddNewFood();
         }

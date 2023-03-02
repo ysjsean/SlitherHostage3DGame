@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class Playerfollow : MonoBehaviour
 {
+    [HideInInspector]
     public Transform Playerpos;
     UnityEngine.AI.NavMeshAgent agent;
 
     void Start()
     {
-        Playerpos = GameObject.FindGameObjectWithTag("SnakeHead").GetComponent<SnakeMovement>().transform;
+        Playerpos = GameObject.FindGameObjectsWithTag("SnakeHead")[0].GetComponent<SnakeMovement>().transform;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
     void Update()
     {
-        agent.destination = Playerpos.position;
+        if (SnakeMovement.instance.isGame_started)
+        {
+            agent.isStopped = false;
+            agent.destination = Playerpos.position;
+        }
+        else
+        {
+            agent.isStopped = true;
+        }
+
     }
 }

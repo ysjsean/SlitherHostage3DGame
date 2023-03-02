@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 
 public class BodyMovement : MonoBehaviour
 {
@@ -23,13 +23,21 @@ public class BodyMovement : MonoBehaviour
 
     void Update()
     {
-        if (!SnakeHead.isGameOver)
+        if (!SnakeHead.isGameOver && SnakeHead.isGame_started)
         {
             BodyTarget = BodyTargetObj.transform.position;
             transform.LookAt(BodyTarget);
             transform.position = Vector3.Lerp(transform.position, BodyTarget, Time.deltaTime * Speed);
-        }
 
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            {
+                transform.Translate(UnityEngine.Vector3.forward * 3.0f * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+            {
+                transform.Translate(UnityEngine.Vector3.forward * -3.0f * Time.deltaTime);
+            }
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -47,8 +55,9 @@ public class BodyMovement : MonoBehaviour
     IEnumerator GameOver()
     {
         SnakeHead.isGameOver = true;
+        AudioManager.instance.Play_DeadSound(SnakeHead.transform);
         yield return new WaitForSeconds(1);
 
-        MenuController.instance.GameOver();
+        GameOverController.instance.GameOver();
     }
 }

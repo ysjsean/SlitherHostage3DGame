@@ -23,18 +23,21 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Play_PickUpSound()
+    public void Play_PickUpSound(Transform snakeHead)
     {
-        AudioSource.PlayClipAtPoint(pickUp_Sound, transform.position);
+        if (!PlayerPrefs.HasKey("soundOn") || PlayerPrefs.GetInt("soundOn") == 1)
+            AudioSource.PlayClipAtPoint(pickUp_Sound, snakeHead.position);
     }
 
-    public void Play_DeadSound()
+    public void Play_DeadSound(Transform snakeHead)
     {
-        AudioSource.PlayClipAtPoint(dead_Sound, transform.position);
+        if (!PlayerPrefs.HasKey("soundOn") || PlayerPrefs.GetInt("soundOn") == 1)
+            AudioSource.PlayClipAtPoint(dead_Sound, snakeHead.position);
     }
 
     public void Play_ClickSound()
     {
-        AudioSource.PlayClipAtPoint(click_Sound, new Vector3(5, 1, 2));
+        if (!PlayerPrefs.HasKey("soundOn") || PlayerPrefs.GetInt("soundOn") == 1)
+            AudioSource.PlayClipAtPoint(click_Sound, new Vector3(5, 1, 2));
     }
 }

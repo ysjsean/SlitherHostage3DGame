@@ -1,11 +1,13 @@
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Obstacles : MonoBehaviour
 {
     [HideInInspector]
     public SnakeMovement SnakeHead;
-
     void Start()
     {
         SnakeHead = GameObject.FindGameObjectWithTag("SnakeHead").GetComponent<SnakeMovement>();
@@ -22,8 +24,9 @@ public class Obstacles : MonoBehaviour
     IEnumerator GameOver()
     {
         SnakeHead.isGameOver = true;
-        yield return new WaitForSeconds(1);
+        AudioManager.instance.Play_DeadSound(SnakeHead.transform);
 
-        MenuController.instance.GameOver();
+        yield return new WaitForSeconds(1);
+        GameOverController.instance.GameOver();
     }
 }
