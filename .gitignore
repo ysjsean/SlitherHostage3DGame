@@ -8,7 +8,7 @@
 [Mm]emoryCaptures/
 UserSettings/
 MonoBleedingEdge/
-# Assets/Material/
+Assets/Material/
 
 # Unity Build Output (Generated game binaries - not needed in Git)
 SlitherHostageTheGame_Data/
