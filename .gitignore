@@ -1,4 +1,4 @@
-# Unity generated files
+# Unity generated folders
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -6,6 +6,11 @@
 [Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
+UserSettings/
+MonoBleedingEdge/
+
+# Unity Build Output (Generated game binaries - not needed in Git)
+SlitherHostageTheGame_Data/
 
 # Visual Studio / MonoDevelop generated files
 *.csproj
@@ -19,20 +24,20 @@
 *.booproj
 *.svd
 
-# OSX
+# macOS system files
 .DS_Store
 .DS_Store?
 
-# Windows
+# Windows system files
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# Linux
+# Linux system files
 *~
 
 # Unity3D cache directory
-/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/
+[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/
 [Aa]ssets/StreamingAssets/*.bin
 
 # Uncomment if you have Unity Package Manager assets
