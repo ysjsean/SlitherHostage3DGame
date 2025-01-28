@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 0e745e2ed66ff4c44b31e4739cbf713c
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 9689200bbf2d7204c865a7d2958629a3
+  - enabled: 1
+    path: Assets/Scenes/Rocky Ridge.unity
+    guid: 24cd5bdf3d89ad6458a7d52dc96af008
+  - enabled: 1
+    path: Assets/Scenes/Groovy Grassland.unity
+    guid: 0c9fe21dc957baa4e92a1eb945991f5f
+  - enabled: 1
+    path: Assets/Scenes/Frosty Field.unity
+    guid: 80d7806b26a327945808414f6d28179f
+  - enabled: 1
+    path: Assets/Scenes/Volcanic Valley.unity
+    guid: 34cf99695aee85545817ad39ae7a563e
+  - enabled: 1
+    path: Assets/Scenes/Congratulation.unity
+    guid: c12eb62e047b31946972e11fa03ccad3
+  m_configObjects: {}

@@ -1,0 +1,74 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+MonoBleedingEdge/
+
+# Unity Build Output (Generated game binaries - not needed in Git)
+SlitherHostageTheGame_Data/
+
+# Visual Studio / MonoDevelop generated files
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# macOS system files
+.DS_Store
+.DS_Store?
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux system files
+*~
+
+# Unity3D cache directory
+[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/
+[Aa]ssets/StreamingAssets/*.bin
+
+# Uncomment if you have Unity Package Manager assets
+# Packages/com.unity.*
+
+# Auto-generated JetBrains Rider/IntelliJ IDE project files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# TextMesh Pro
+[Aa]ssets/TextMesh Pro/Examples & Extras/
+
+# Exclude generated build files (add custom folder names if needed)
+*.apk
+*.xcodeproj
+*.xcworkspace
+
+# Cache files for Unity Cloud Build
+*.cloud
+
+# Gradle cache (Android)
+.gradle/
+
+# Exclude logs and crash reports
+crash_logs/
+*.log
+
+# Addressable Assets Data
+[Aa]ssets/AddressableAssetsData/*.json
+
+# Exclude ProBuilder auto-generated files
+Assets/ProBuilder/ProBuilderScene.json
