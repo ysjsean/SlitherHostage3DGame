@@ -19,5 +19,10 @@ You can build the project on your end.
 
 ### Contributors:
 
-Sean Young Song Jie
-Tan Khai Ming
+1. Sean Young Song Jie
+2. Tan Khai Ming (Kenny)
+
+| Sean       | Kenny  |
+| ---------- | ------ |
+| Game Logic | Assets |
+| Game Flow  | Menu   |
